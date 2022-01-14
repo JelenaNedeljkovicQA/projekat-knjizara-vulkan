@@ -39,6 +39,8 @@ public class InventoryPage extends BasePage{
     @FindBy(name = "newsletter_email")
     WebElement newsletterEmail;
 
+    @FindBy(xpath = "//div[@class='text-wrapper ']/div[@class='title']/a[@title='CENTRAL PARK ']")
+    WebElement bookCentralPark;
 
     @FindBy (xpath = "//button[@class='cookie-agree 3']/span[@aria-hidden='true']")
     WebElement cookieButton;
@@ -120,7 +122,6 @@ public class InventoryPage extends BasePage{
     public void enterNewsletterEmail (String text) {
         print("enterNewsletterEmailField");
         newsletterEmail.sendKeys(text);
-        return;
     }
 
 
@@ -203,7 +204,8 @@ public class InventoryPage extends BasePage{
         waitForElement(enterSearchText);
         enterSearchText.sendKeys(Strings.AUTHOR_OF_BOOKS + "\n");
         print("clickOnBookCentralPark");
-        driver.get("https://www.knjizare-vulkan.rs/ljubavni-roman/26354-central-park");
+        waitForElement(bookCentralPark);
+        bookCentralPark.click();
         print("clickAddToCartBookCentralPark");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", addToCartBookCentralPark);

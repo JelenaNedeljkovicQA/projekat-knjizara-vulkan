@@ -2,11 +2,8 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.InventoryPage;
-import pages.Strings;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -37,7 +34,7 @@ public class ShoppingTest extends BaseTest{
 
 
         }finally {
-//            driver.quit();
+            driver.quit();
 
         }
     }

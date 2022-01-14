@@ -1,12 +1,7 @@
 package tests;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.InventoryPage;
 import pages.Strings;
 
@@ -38,7 +33,7 @@ public class FindAndSortTest extends BaseTest{
 
 
         }finally {
-//            driver.quit();
+            driver.quit();
         }
     }
 

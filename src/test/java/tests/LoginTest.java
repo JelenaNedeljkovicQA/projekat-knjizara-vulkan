@@ -1,10 +1,6 @@
 package tests;
 
-import com.google.common.annotations.VisibleForTesting;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import pages.InventoryPage;
 import pages.LoginPage;
 import pages.Strings;
 
@@ -23,13 +19,12 @@ public class LoginTest extends BaseTest{
             loginPage.enterUserNameField (Strings.VALID_USERNAME);
             loginPage.enterPasswordField (Strings.VALID_PASSWORD);
 
-            InventoryPage inventoryPage = loginPage.clickinLoginButtonSuccess();
-
+            loginPage.clickinLoginButtonSuccess();
 
             assert CurrentURLEqualTo(Strings.INVENTORY_PAGE_URL) : "Expected url:" + Strings.INVENTORY_PAGE_URL;
 
         } finally {
-//            driver.quit();
+            driver.quit();
         }
 
     }

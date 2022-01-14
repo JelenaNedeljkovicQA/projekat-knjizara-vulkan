@@ -28,7 +28,7 @@ public class NewsletterTest extends BaseTest{
                     + messageFailed, messageFailed.equals(Strings.MESSAGE_FAILED));
 
         }finally {
-//            driver.quit();
+            driver.quit();
         }
         }
 

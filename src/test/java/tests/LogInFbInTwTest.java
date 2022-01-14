@@ -1,13 +1,11 @@
 package tests;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.InventoryPage;
 import pages.Strings;
 
-import java.net.URL;
+
 import java.util.ArrayList;
 
 public class LogInFbInTwTest extends BaseTest{
@@ -32,7 +30,7 @@ public class LogInFbInTwTest extends BaseTest{
 
 
         }finally {
-//            driver.quit();
+            driver.quit();
         }
     }
 
@@ -56,7 +54,7 @@ public class LogInFbInTwTest extends BaseTest{
 
 
         }finally {
-//            driver.quit();
+            driver.quit();
         }
     }
 
@@ -79,7 +77,7 @@ public class LogInFbInTwTest extends BaseTest{
 
 
         }finally {
-//            driver.quit();
+            driver.quit();
         }
     }
 
